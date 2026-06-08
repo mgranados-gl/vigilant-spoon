@@ -4,7 +4,7 @@ import { StatusView } from "./ui/statusView";
 import type { RuntimeConfig } from "./types/config";
 import type { AddInLifecycle, GeotabApi, GeotabState } from "./types/geotab";
 
-const ADDIN_NAMESPACE = "gapReport";
+const ADDIN_NAMESPACES = ["gap_report", "gapReport", "Gap Report", "airgasGapWorkbook"] as const;
 
 const generateButton = mustGetElement<HTMLButtonElement>("generate-btn");
 const statusElement = mustGetElement<HTMLDivElement>("status");
@@ -75,7 +75,7 @@ function registerAddIn(): void {
   window.geotab = window.geotab ?? {};
   window.geotab.addin = window.geotab.addin ?? {};
 
-  window.geotab.addin[ADDIN_NAMESPACE] = (): AddInLifecycle => ({
+  const lifecycleFactory = (): AddInLifecycle => ({
     initialize(api, state, callback): void {
       apiRef = api;
       stateRef = state;
@@ -94,6 +94,10 @@ function registerAddIn(): void {
       generateButton.removeEventListener("click", onGenerateClick);
       statusView.clear();
     }
+  });
+
+  ADDIN_NAMESPACES.forEach((namespace) => {
+    window.geotab.addin[namespace] = lifecycleFactory;
   });
 }
 
