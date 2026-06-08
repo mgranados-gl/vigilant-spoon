@@ -74,6 +74,7 @@ async function handleGenerateClick(): Promise<void> {
 function registerAddIn(): void {
   window.geotab = window.geotab ?? {};
   window.geotab.addin = window.geotab.addin ?? {};
+  const addinRegistry = window.geotab.addin;
 
   const lifecycleFactory = (): AddInLifecycle => ({
     initialize(api, state, callback): void {
@@ -97,7 +98,7 @@ function registerAddIn(): void {
   });
 
   ADDIN_NAMESPACES.forEach((namespace) => {
-    window.geotab.addin[namespace] = lifecycleFactory;
+    addinRegistry[namespace] = lifecycleFactory;
   });
 }
 
