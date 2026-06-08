@@ -1,0 +1,25 @@
+{
+  "templatePath": "/template/Gridline _ Gap Report.xlsx",
+  "outputFileNamePrefix": "Airgas-Gap-Report",
+  "worksheets": {
+    "data1": "Data1",
+    "data2": "Data2"
+  },
+  "pagination": {
+    "dutyStatusResultsLimit": 5000,
+    "exceptionResultsLimit": 5000,
+    "lookupResultsLimit": 500
+  },
+  "retries": {
+    "maxAttempts": 3,
+    "baseDelayMs": 750
+  },
+  "dutyStatus": {
+    "states": ["Active"],
+    "statuses": ["D", "INT_D"]
+  },
+  "exceptionRuleIds": {
+    "enteringOffice": "aoL1tECTjFEqNGLqrZ_F8Ew",
+    "exitingOffice": "a4cQ5-5kHtkOTFz8HKO2iXQ"
+  }
+}
