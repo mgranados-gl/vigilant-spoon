@@ -5,13 +5,13 @@
   "enableViewSecurityId": true,
   "items": [
     {
-      "url": "https://your-host.example.com/index.html",
+      "url": "https://mgranados-gl.github.io/vigilant-spoon/index.html",
       "path": "ActivityLink/",
       "category": "ReportsId",
       "menuName": {
         "en": "Gap Report"
       },
-      "svgIcon": "https://your-host.example.com/assets/icon.svg"
+      "svgIcon": "https://mgranados-gl.github.io/vigilant-spoon/assets/icon.svg"
     }
   ],
   "files": {}
