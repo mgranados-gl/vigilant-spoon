@@ -26,9 +26,10 @@ async function loadRuntimeConfig(): Promise<RuntimeConfig> {
     return configCache;
   }
 
-  const response = await fetch("/config/runtime-config.json", { cache: "no-store" });
+  const runtimeConfigUrl = new URL("config/runtime-config.json", window.location.origin + import.meta.env.BASE_URL);
+  const response = await fetch(runtimeConfigUrl.toString(), { cache: "no-store" });
   if (!response.ok) {
-    throw new Error("Runtime config could not be loaded from /config/runtime-config.json");
+    throw new Error(`Runtime config could not be loaded from ${runtimeConfigUrl.toString()}`);
   }
 
   configCache = (await response.json()) as RuntimeConfig;

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Gap Report icon">
+  <rect x="4" y="6" width="56" height="52" rx="8" fill="#0b3a53"/>
+  <rect x="12" y="16" width="40" height="4" rx="2" fill="#cde6f3"/>
+  <rect x="12" y="26" width="20" height="4" rx="2" fill="#cde6f3"/>
+  <rect x="12" y="36" width="16" height="4" rx="2" fill="#cde6f3"/>
+  <path d="M40 40l6-8 6 6" fill="none" stroke="#66d19e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="38" cy="42" r="2.5" fill="#66d19e"/>
+</svg>

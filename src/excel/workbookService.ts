@@ -12,9 +12,10 @@ export interface WorkbookWriteInput {
 }
 
 export async function writeAndDownloadWorkbook(input: WorkbookWriteInput): Promise<void> {
-  const templateResponse = await fetch(input.templatePath);
+  const templateUrl = new URL(input.templatePath, window.location.origin + import.meta.env.BASE_URL);
+  const templateResponse = await fetch(templateUrl.toString());
   if (!templateResponse.ok) {
-    throw new Error(`Template could not be loaded from ${input.templatePath}`);
+    throw new Error(`Template could not be loaded from ${templateUrl.toString()}`);
   }
 
   const templateBuffer = await templateResponse.arrayBuffer();

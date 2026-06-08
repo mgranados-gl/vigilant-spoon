@@ -1,5 +1,5 @@
 {
-  "templatePath": "/template/Gridline _ Gap Report.xlsx",
+  "templatePath": "template/Gridline _ Gap Report.xlsx",
   "outputFileNamePrefix": "Airgas-Gap-Report",
   "worksheets": {
     "data1": "Data1",
