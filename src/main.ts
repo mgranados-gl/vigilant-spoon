@@ -4,7 +4,7 @@ import { StatusView } from "./ui/statusView";
 import type { RuntimeConfig } from "./types/config";
 import type { AddInLifecycle, GeotabApi, GeotabState } from "./types/geotab";
 
-const ADDIN_NAMESPACE = "airgasGapWorkbook";
+const ADDIN_NAMESPACE = "gapReport";
 
 const generateButton = mustGetElement<HTMLButtonElement>("generate-btn");
 const statusElement = mustGetElement<HTMLDivElement>("status");
