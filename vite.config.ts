@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  base: "/vigilant-spoon/",
+  base: "./",
   build: {
     outDir: "docs",
     sourcemap: true,
